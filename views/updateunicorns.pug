@@ -1,0 +1,30 @@
+html 
+    body
+    each u in unicorndata
+        if (u.name==uname)  
+            form(action="/updateddata/"+uname method="post")
+                span name: 
+                input(type="text" name="name" value=u.name)
+                br
+                br
+                span Dateofbirth:
+                input(type="text" name="dob" value=u.dob)
+                br
+                br
+                span loves:
+                input(type="text" name="loves" value=u.loves.toString())
+                br
+                br
+                span weight:
+                input(type="text" name="weight" value=u.weight)
+                br
+                br
+                span gender:
+                input(type="text" name="gender" value=u.gender)
+                br
+                br
+                span vampires:
+                input(type="text" name="vv" value=u.vampires)
+                br
+                br
+                button submit

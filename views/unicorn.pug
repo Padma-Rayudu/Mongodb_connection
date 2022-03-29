@@ -1,0 +1,34 @@
+html 
+    body 
+        table(border="2px") 
+            thead 
+                th 
+                    a(href="http://localhost:3400/unicornsort/name") name 
+                th 
+                    a(href="http://localhost:3400/unicornsort/dob") DoB 
+                th 
+                    a(href="http://localhost:3400/unicornsort/loves") Loves
+                th 
+                    a(href="http://localhost:3400/unicornsort/weight") weight 
+                th 
+                    a(href="http://localhost:3400/unicornsort/gender") namegender 
+                th 
+                    a(href="http://localhost:3400/unicornsort/vampires") vampires
+                th(colspan=2) operations 
+            tbody 
+                each u in unidata 
+                    tr 
+                        th=u.name 
+                        th=u.dob 
+                        th=u.loves 
+                        th=u.weight 
+                        th=u.gender 
+                        th=u.vampires
+                        th 
+                            a(href="/unicorn/"+u.name)
+                                button Delete 
+                        th   
+                            a(href="/unicornupdate/"+u.name)
+                                button Edit
+        a(href="/addunicorn")
+            button AddUnicorn
